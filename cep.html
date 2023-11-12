@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pe-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca cep</title>
+</head>
+<body>
+    <header class=" bg-light">
+        <nav class="container navbar navbar-expand-lg navbar-light ">
+            <div class="navbar-brand fw-bold text-uppercase ms-3"> Busca <span class="text-success">Cep</span></div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">         
+            <div class="row mb-4 mt-5">
+                <div class="col d-flex justify-content-center">
+                    <input class="form-control w-25 me-3" required maxlength="8" pattern="\d*" id="cepDigitado" placeholder="Digite seu cep - apenas números" type="text">
+                    <button onclick="buscarCep()" class="btn btn-success" type="button">Buscar</button>
+                </div>
+            </div>
+            <hr class="my-5">
+        </div>
+    </section>
+
+    <section>
+        <div class="container fw-bold">
+            <div class="row">
+                <div class="col-4">
+                    <label for="cep">Cep:</label>
+                    <input class="form-control " type="text" name="cep" id="cep">
+                </div>
+                <div class="col-8"> 
+                    <label for="logradouro">Logradouro:</label>
+                    <input class="form-control" type="text" name="logradouro" id="logradouro">
+                </div>
+            </div>
+            <div class="row mt-4 ">
+                <div class="col-4">
+                    <label for="bairro">Bairro:</label>
+                    <input class="form-control" type="text" id="bairro" name="bairro">
+                </div>
+                <div class="col-4">
+                    <label for="cidade">Cidade:</label>
+                    <input class="form-control" type="text" id="cidade" name="cidade">
+                </div>
+                <div class="col-4">
+                    <label for="estado">Estado:</label>
+                    <input class="form-control" type="text" id="estado" name="estado">
+                </div>
+                
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <div class="float-end">
+                    <button class="btn btn-danger" onclick="limparTela()" type="button">Limpar Tela</button>    
+                </div>
+              
+            </div>
+
+        </div>
+
+        <div>
+            <div class="row my-5">
+                <div class="col-12">
+                    <div id="alerta">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
